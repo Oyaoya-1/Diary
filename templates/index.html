@@ -40,6 +40,7 @@
                         let title = articles[i]["title"];
                         let content = articles[i]["content"];
                         let file = articles[i]['file'];
+                        let time = articles[i]['time'] || '????.??.??';
                         let profile = articles[i]['profile'];
                         let temp_html = `
                             <div class="col-4">
@@ -51,7 +52,7 @@
                                     <p class="card-text">
                                     ${content}
                                     </p>
-                                    <h6 class="card-subtitle mb-2 text-muted">2022.02.15</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
                                 </div>
                             </div>
                         `;

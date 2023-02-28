@@ -33,7 +33,7 @@ def save_diary():
     content_receive = request.form.get('content_give')
 
     today = datetime.now()
-    mytime = today.strftime('%y-%m-%d %H-%M-%S')
+    mytime = today.strftime('%Y-%m-%d %H-%M-%S')
 
     file = request.files['file_give']
     extension = file.filename.split('.')[-1]
@@ -46,6 +46,8 @@ def save_diary():
     profilename = f'profile-{mytime}.{extension}'
     save_profile = f'static/{profilename}'
     profile.save(save_profile)
+
+    time = today.strftime('%Y.%m.%d')
 
     doc = {
         'file': filename,
