@@ -54,6 +54,7 @@ def save_diary():
         'profile': profilename,
         'title': title_receive,
         'content': content_receive,
+        'time': time,
     }
     db.diary.insert_one(doc)
     return jsonify({'message': 'post complete' })
